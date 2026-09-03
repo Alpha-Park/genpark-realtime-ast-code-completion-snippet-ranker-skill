@@ -1,0 +1,42 @@
+{
+  "name": "genpark-realtime-ast-code-completion-snippet-ranker-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Real-time sub-10ms AST code completion snippet ranker and context-aware syntax validator for developer IDE agents.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "code-synthesis",
+  "tags": [
+    "augment-code",
+    "supermaven",
+    "code-completion",
+    "ast-ranker",
+    "developer-tools"
+  ],
+  "inputs": {
+    "cursor_prefix_code": {
+      "type": "string"
+    },
+    "cursor_suffix_code": {
+      "type": "string"
+    },
+    "candidate_completions": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "ranking_id": {
+      "type": "string"
+    },
+    "top_recommendation": {
+      "type": "string"
+    },
+    "inference_latency_ms": {
+      "type": "number"
+    },
+    "completion_telemetry_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
